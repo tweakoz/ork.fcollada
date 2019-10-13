@@ -55,3 +55,10 @@ target_include_directories (ork_fcollada PRIVATE ${SRCD}/FCollada/LibXML/include
 ###################################
 
 install(TARGETS ork_fcollada LIBRARY DESTINATION $ENV{OBT_STAGE}/lib )
+install(DIRECTORY FCollada/
+        DESTINATION $ENV{OBT_STAGE}/include/fcollada
+        FILES_MATCHING PATTERN "*.h")
+
+install(DIRECTORY FCollada/
+        DESTINATION $ENV{OBT_STAGE}/include/fcollada
+        FILES_MATCHING PATTERN "*.hpp")
