@@ -10,6 +10,9 @@ set(CMAKE_BUILD_WITH_INSTALL_RPATH ON)
 
 IF(${APPLE})
 set(CMAKE_MACOSX_RPATH 1)
+add_definitions(-DOSX -DORK_OSX)
+ELSE()
+add_definitions(-DIX -DLINUX -DGCC)
 ENDIF()
 
 add_compile_options(-Wno-deprecated -Wno-register -fexceptions)
